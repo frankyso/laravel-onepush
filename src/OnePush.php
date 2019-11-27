@@ -96,10 +96,7 @@ class MessageBuilder
         $this->onePush = $onePush;
         $this->oneSignal = new OneSignalClient(config('onepush.onesignal.app_id'), config('onepush.onesignal.rest_api_key'), config('onepush.onesignal.user_auth_key'));
         $this->setIconColor(config('onepush.interface.small_icon_color'));
-
-        if ($onePush->env == config('onepush.env')) {
-            $this->setTags(["key" => 'env', "relation" => "=", "value" => "dev"]);
-        }
+        $this->setTags(["key" => 'env', "relation" => "=", "value" => config('onepush.env')]);
     }
 
     public function setMessage($message)
