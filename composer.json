@@ -1,0 +1,55 @@
+{
+  "name": "frankyso/laravel-onepush",
+  "description": "OneSignal API Wrapper for Private Project",
+  "keywords": [
+    "laravel",
+    "onesignal",
+    "push notification",
+    "library"
+  ],
+  "type": "library",
+  "require": {
+    "php": ">=7.2.0",
+    "berkayk/onesignal-laravel": "^1.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^4.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Franky So",
+      "email": "frankyso.mail@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "frankyso\\OnePush\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "frankyso\\OnePush\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true ,
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": [
+      "@php vendor/bin/phpunit -c ./ --color"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "frankyso\\OnePush\\iPaymuServiceProvider"
+      ],
+      "aliases": {
+        "Debugbar": "frankyso\\OnePush\\iPaymuFacade"
+      }
+    }
+  }
+}
