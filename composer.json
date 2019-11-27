@@ -45,10 +45,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "frankyso\\OnePush\\iPaymuServiceProvider"
+        "frankyso\\OnePush\\OnePushServiceProvider"
       ],
       "aliases": {
-        "Debugbar": "frankyso\\OnePush\\iPaymuFacade"
+        "Debugbar": "frankyso\\OnePush\\OnePushFacade"
       }
     }
   }

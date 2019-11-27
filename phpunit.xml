@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+     backupStaticAttributes="false"
+     bootstrap="vendor/autoload.php"
+     colors="true"
+     convertErrorsToExceptions="true"
+     convertNoticesToExceptions="true"
+     convertWarningsToExceptions="true"
+     processIsolation="false"
+     stopOnFailure="false"
+     verbose="true"
+>
+
+    <testsuites>
+        <testsuite name="frankyso\OnePush Test Suite">
+            <directory suffix="Test.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <server name="APP_KEY" value="VfjU5xL8avjYBiZMPzVAFKMXNp35d0"/>
+    </php>
+</phpunit>
