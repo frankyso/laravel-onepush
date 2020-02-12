@@ -147,7 +147,7 @@ class MessageBuilder
     /**
      * Trigger Send Button
      *
-     * @return void
+     * @return GuzzleHttp\Psr7\Response
      */
     public function send()
     {
@@ -173,6 +173,6 @@ class MessageBuilder
             $parameters['url'] = $this->interface['redirect'];
         }
 
-        $this->oneSignal->sendNotificationCustom($parameters);
+        return $this->oneSignal->sendNotificationCustom($parameters);
     }
 }
