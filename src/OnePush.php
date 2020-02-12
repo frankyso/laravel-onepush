@@ -165,9 +165,14 @@ class MessageBuilder
             'ios_badgeType' => 'Increase',
             'ios_badgeCount' => 1,
             'included_segments' => ['All'],
-            'filters' => $this->tags,
             'large_icon' => $this->interface['large_icon']
         ];
+
+        // Unset segments if have tag filters to avoid warning from OnePush
+        if (!empty($this->tags)) {
+            $parameters['filters'] = $this->tags;
+            unset($parameters['included_segments']);
+        }
 
         if ($this->interface['redirect'] != null) {
             $parameters['url'] = $this->interface['redirect'];
